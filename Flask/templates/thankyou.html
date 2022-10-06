@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>表單</title>
+    </head>
+
+    <body>
+        {% block content %}
+        <div class="container">
+            <p class="fs-1">感謝填寫，以下是您提供的訊息</p>
+            <ul>
+                <li>
+                    <p class="fs-2">預約姓名: {{form_data['name']}}</p>
+                </li>
+                <li>
+                    <p class="fs-2">預約電話: {{form_data['tel']}}</p>
+                </li>
+                <li>
+                    <p class="fs-2">預約人數: {{form_data['num_people']}}</p>
+                </li>
+                <li>
+                    <p class="fs-2">預約日期: {{form_data['reserve_date']}}</p>
+                </li>
+                <li>
+                    <p class="fs-2">預約時間: {{form_data['AM_PM']}}</p>
+                </li>
+                <li>
+                    <p class="fs-2">兒童寫真方案選擇: {{form_data['option']}}</p>
+                </li>
+                <li>
+                    <p class="fs-2">加購項目: {{form_data['plus']}}</p>
+                </li>
+            </ul>
+        </div>
+        {% endblock %}
+
+        
+    </body>
+</html>
