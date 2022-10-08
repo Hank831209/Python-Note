@@ -68,7 +68,7 @@ def insert():
 @app.route('/select1')
 def select1():
     # Read data
-    query = Product.query.filter_by(name='456').first()
+    query = Product.query.filter_by(name='Max').first()
     if query:  # 沒查詢到資料query會是None
         print(query.name)
         print(query.price)

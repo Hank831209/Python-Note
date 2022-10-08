@@ -106,5 +106,22 @@ def insert1():
     db.session.commit()
     return 'ok'
 
+
+@app.route('/select')
+def select():
+    # Add data
+    # now = datetime.now()
+    # record_date = now.strftime('%Y-%m-%d %p')  # 字串 2022-10-06 PM
+    # print(record_date, type(record_date))
+    a = Reserve.query.filter_by(reserve_date='2022-10-21 PM').first()
+    if a:
+        return '有資料'
+    else:
+    # if Reserve.query.filter_by(reserve_date='2022-10-21 PM').first():  # 是否該時段已被預約
+    #     print('日期輸入失敗 請重新填寫')
+    # db.session.add(record)
+    # db.session.commit()
+        return a
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=4000, debug=True)
