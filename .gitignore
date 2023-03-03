@@ -1,2 +1,3 @@
 *.txt
 Pytorch/Data/dataset
+.ipynb_checkpoints
